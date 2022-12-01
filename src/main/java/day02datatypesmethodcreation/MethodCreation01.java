@@ -67,24 +67,24 @@ public class MethodCreation01 {
     }
 
     //1)Dikdörtgenin alanini hesaplayan methodu olusturunuz ve kullaniniz
-    //2)Dikdörtgenin cevresini hesaplayan methodu olusturunuz ve kullaniniz
-    //3)Dairenin cevresini hesaplayan methodu olusturunuz ve kullaniniz
-    //4)Dairenin alaninio hesaplayan methodu olusturunuz ve kullaniniz
-
     public static int areaOfRectangle(int a, int b) {
         return a * b;
     }
 
+    //2)Dikdörtgenin cevresini hesaplayan methodu olusturunuz ve kullaniniz
     public static int perimeterOfRectangle(int a, int b) {
         return 2 * (a + b);
     }
 
+
+    //3)Dairenin alanini hesaplayan methodu olusturunuz ve kullaniniz
     public static double pi = 3.14;
 
     public static double areaOfTheCircle(int r) {
         return pi * (r * r);
     }
 
+    //4)Dairenin cevresini hesaplayan methodu olusturunuz ve kullaniniz
     public static double circumferenceOfTheCircle(int r) {
         return 2 * pi * r;
     }
