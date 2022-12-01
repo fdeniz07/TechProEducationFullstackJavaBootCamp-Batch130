@@ -7,7 +7,7 @@ public class C04_Scanner {
 
     public static void main(String[] args) {
 
-        //Ex: Kullanicidan alinan 5 basamakli bir sayinin, ilk iki ve son iki basamagindaki rakamlarin toplamini yazdirin kodu yaziniz
+        //Ex: Kullanicidan alinan 5 basamakli bir sayinin, ilk iki ve son iki basamagindaki rakamlarin toplamini yazdiran kodu yaziniz
 
         Scanner input = new Scanner(System.in);
 
