@@ -29,6 +29,18 @@ public class MethodCreation01 {
 
         double kup = getCube(10);
         System.out.println(kup);
+
+        int dikdortgenAlan = areaOfRectangle(10, 30);
+        System.out.println("Dikdörtgenin Alani: " + dikdortgenAlan);
+
+        int dikdortgenCevre = perimeterOfRectangle(10, 30);
+        System.out.println("Dikdörtgenin Cevresi: " + dikdortgenCevre);
+
+        double daireAlan = areaOfTheCircle(10);
+        System.out.println("Dairenin Alani: " + daireAlan);
+
+        double daireCevre = circumferenceOfTheCircle(10);
+        System.out.println("Dairenin Cevresi: " + daireCevre);
     }
 
     public static int add(int a, int b) {
@@ -54,18 +66,26 @@ public class MethodCreation01 {
         return a * a * a;
     }
 
-    //1)Dikdirtgenin alanini hesaplayan methodu olusturunuz ve kullaniniz
-    //2)Dikdirtgenin cevresini hesaplayan methodu olusturunuz ve kullaniniz
+    //1)Dikdörtgenin alanini hesaplayan methodu olusturunuz ve kullaniniz
+    //2)Dikdörtgenin cevresini hesaplayan methodu olusturunuz ve kullaniniz
     //3)Dairenin cevresini hesaplayan methodu olusturunuz ve kullaniniz
     //4)Dairenin alaninio hesaplayan methodu olusturunuz ve kullaniniz
+
+    public static int areaOfRectangle(int a, int b) {
+        return a * b;
+    }
+
+    public static int perimeterOfRectangle(int a, int b) {
+        return 2 * (a + b);
+    }
+
+    public static double pi = 3.14;
+
+    public static double areaOfTheCircle(int r) {
+        return pi * (r * r);
+    }
+
+    public static double circumferenceOfTheCircle(int r) {
+        return 2 * pi * r;
+    }
 }
-
-/*
-    public static void main(String[] args) {
-        test();
-    }
-    public static void test() {
-        System.out.println("Bu bir test mesajidir");
-    }
-
- */
