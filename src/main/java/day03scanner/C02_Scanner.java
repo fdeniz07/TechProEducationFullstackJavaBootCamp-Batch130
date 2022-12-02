@@ -20,6 +20,7 @@ public class C02_Scanner {
         byte age = input.nextByte();
 
 
+        //Note: String'lerde disaridan veri almak icin Next ve NextLine kullanilir. Next sadece ilk kelimeyi alirken, NextLine cümlenin tamamini alir.
 
         //Kullanici ad,memleket, yas, boy, yasadigi yeri sevip sevmedigini soran program
         Scanner scan = new Scanner(System.in);
