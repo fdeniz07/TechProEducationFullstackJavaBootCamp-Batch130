@@ -5,6 +5,10 @@ public class C02_AsciiValues {
     /*
         ASCII : Amerikan Standart Kodlama Sistemi uluslararasi kabul görmüs degerlerdir.
 
+        Java da her karakterin sayısal bir değeri vardır.
+        Bu değerler ASCII Değer'ler olarak adlandırılır.
+        Bu değerlerin tamamının bulunduğu tabloya ASCII Table denir.
+
         Klavyemizde kullandigimiz harf ve sembollerin matematiksel karsiligi, Char data türünde isleme alinirsa; o char degerinin ASCII tablosundaki karsiligini isleme alir.
 
         Harf ve sembollere deger atar
