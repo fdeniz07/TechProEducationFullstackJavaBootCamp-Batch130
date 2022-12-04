@@ -147,5 +147,22 @@ public class StringManipulations01 {
         }
 
 
+        //Example 11: Sayi -1 ile 10 arasinda ise ekrana "Rakam" yazdirin
+        int number = 30;
+
+        if (number > -1 && number < 10) {
+            System.out.println("Rakam");
+        }
+
+
+        //Example 12: Sayi üc basamakli ise ekrana "Wooow!" yazdirin
+        int num2 = -456;
+
+        num2 = Math.abs(num2); // Math kkütüphanesinden abs() "mutlak deger" method'u kullanilir
+
+        if (num2 > 99 && num2 < 1000) {
+            System.out.println("Wooow!");
+        }
+
     }
 }
