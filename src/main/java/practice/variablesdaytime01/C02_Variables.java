@@ -1,4 +1,4 @@
-package practice.variablesdatetime01;
+package practice.variablesdaytime01;
 
 import java.util.Scanner;
 
@@ -15,27 +15,26 @@ public class C02_Variables {
         System.out.println("TechProEd Spor Salonuna Hosgeldiniz");
 
         System.out.println("Lütfen isim soyisim giriniz : ");
-        String isim = input.nextLine();
+        String fullName = input.nextLine();
 
         System.out.println("Lütfen yasinizi giriniz : ");
-        byte yas = input.nextByte();
+        byte age = input.nextByte();
 
         System.out.println("Lütfen kilonuzu giriniz : ");
-        double kilo = input.nextDouble();
+        double weight = input.nextDouble();
 
         System.out.println("Lütfen boyunuzu giriniz : ");
-        double boy = input.nextDouble();
+        double height = input.nextDouble();
 
-        int aylikUcret = 20;
-        System.out.println("Aylik ücret = " + aylikUcret);
+        int salary = 20;
+        System.out.println("Aylik ücret = " + salary);
 
         System.out.println("Lütfen devam etmek istediginiz ay sayisini giriniz : ");
-        int ay = input.nextInt();
+        int period = input.nextInt();
 
-        int toplamTutar = aylikUcret * ay;
-        System.out.println("\nIsminiz : " + isim + "\t" + "Yasiniz : " + yas +"\t" + "Kilonuz : " + kilo + "\t" +"Boyunuz : " +boy + "\n" +"Ödemeniz gereken toplam tutar : "+
-                toplamTutar+"$");
-
+        int total = salary * period;
+        System.out.println("\nIsminiz : " + fullName + "\t" + "Yasiniz : " + age +"\t" + "Kilonuz : " + weight + "\t" +"Boyunuz : " +height + "\n" +"Ödemeniz gereken toplam tutar : "+
+                total+"$");
 
     }
 
