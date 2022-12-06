@@ -17,7 +17,7 @@ public class C05_Scanner {
         System.out.println("lütfen dikdortgenin uzun kenarını giriniz...");
         int boy = input.nextInt();
 
-        System.out.println("dikdortgenin alanı=" + (en + boy));
+        System.out.println("dikdortgenin alanı=" + (en * boy));
 
         System.out.println("dikdortgenin cevresi=" + (2 * (en + boy)));
 
