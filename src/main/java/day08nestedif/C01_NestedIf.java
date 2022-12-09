@@ -21,7 +21,6 @@ public class C01_NestedIf {
                                b + c > a > b - c
 
                                a = b = c ise eskenar ücgen
-
          */
 
 
@@ -59,7 +58,6 @@ Bu yuzden mumkunse nested kod yazilmamali
                         Iki kenari birbirine esit ise "Ikizkenar Ücgen" yazdiriniz
 
                         Tüm kenarlari birbirinden farkli ise "Cesitkenar Ücgen" yazdiriniz
-
 
          */
 
