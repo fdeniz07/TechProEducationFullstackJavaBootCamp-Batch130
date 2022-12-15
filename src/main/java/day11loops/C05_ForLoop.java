@@ -51,5 +51,65 @@ public class C05_ForLoop {
         }
         System.out.println(result);
 
+
+        //Example 5: Verilen bir String'de 'a' character'i haric tum character'leri yazdiriniz.
+        //           "Madagaskar" ==> Mdgskr
+        String s = "Madagaskar";
+
+        //1.Yol:
+        String t = s.replace("a", "");
+        System.out.println(t);// Mdgskr
+
+        //2.Yol:
+        for(int i=0; i<s.length(); i++){
+            char ch = s.charAt(i);
+            if(ch!='a'){
+                System.out.print(ch);
+            }
+        }
+
+        System.out.println();
+
+        //3.Yol: Madagaskar
+        for(int i=0; i<s.length(); i++){
+            char ch = s.charAt(i);
+            if(ch=='a'){
+                continue;//continue keyword'u bazi sartlar icin loop'un adimlarini atlamamizi saglar
+            }
+            System.out.print(ch);
+        }
+
+
+        //Example 6: Size verilen bir String'i tersten yazdiriniz
+        //           "Germany" ==> ynamreG
+        String s1 = "Java";
+        String t1 = "";
+
+        for(int i=s1.length()-1; i>=0; i--){
+            t1 = t1 + s1.charAt(i);
+        }
+        System.out.println(t1);
+
+        //Example 7: Size verilen bir String'in "Palindrome" olup olmadigini kontrol eden kodu yaziniz
+        //           civic, nalan, kucuk, 11211 ==> Palindrome
+
+        //Logic: String'i ters cevir sonra da duz hali ile ters halini karsilatir, ayni ise "Palindrome" de.
+        String duz = "Civic";
+
+        String ters = "";
+
+        for(int i=duz.length()-1; i>=0; i--){
+
+            ters = ters + duz.charAt(i);
+
+        }
+
+        if(duz.equalsIgnoreCase(ters)){
+            System.out.println(duz + " : Palindrome'dur");
+        }else{
+            System.out.println(duz + " : Palindrome degildir");
+        }
+
+
     }
 }
