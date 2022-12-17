@@ -1,6 +1,6 @@
 package day13whileloopdowhileloop;
 
-public class DoWhlieLoop01 {
+public class DoWhileLoop01 {
     public static void main(String[] args) {
 
         //1) While-loop
