@@ -54,5 +54,8 @@ public class WhileLoop01 {
             num/=10;
         }
         System.out.println(sum);
+
+
+
     }
 }
