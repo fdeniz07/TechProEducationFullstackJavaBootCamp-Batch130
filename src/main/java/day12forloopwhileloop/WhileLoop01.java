@@ -42,19 +42,30 @@ public class WhileLoop01 {
 
         //Note: Sayi %10 herzaman sayinin son rakamini verir
 
+
+        //1.Yol - while - loop
         int num = 5711;
         int sum = 0;
 
         num = Math.abs(num);
 
-        while (num>0){
+        while (num > 0) {
 
-            sum += num%10;
+            sum += num % 10;
 
-            num/=10;
+            num /= 10;
         }
         System.out.println(sum);
 
+        //2.Yol - For -loop
+        int a = 684;
+        int toplam = 0;
+
+        for (int k = a; k > 0; k /= 10) {
+
+            toplam += k % 10;
+        }
+        System.out.println(toplam); //18
 
 
     }
