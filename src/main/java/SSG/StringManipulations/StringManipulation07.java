@@ -1,4 +1,4 @@
-package SSG;
+package SSG.StringManipulations;
 
 public class StringManipulation07 {
     /*

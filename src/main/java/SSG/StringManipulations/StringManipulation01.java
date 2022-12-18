@@ -1,6 +1,6 @@
-package SSG;
+package SSG.StringManipulations;
 
-public class StringManipulation {
+public class StringManipulation01 {
     public static void main(String[] args) {
 
         /*
