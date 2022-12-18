@@ -20,17 +20,17 @@ public class StringManipulation {
             14.isEmpty() : Bos mu diye kontrol eder
             15.split() : Bir string'i ikiye böler
             16.isBlank() : Bosluk var mi diye kontrol eder.
-            17.
-            18.
-            19.
-            ASCII Table
+            17.equals(): esit mi diye kontrol eder =='den farkı sayisal deger ve char degerlini kontrol edememesi
+            18.equalsIgnoreCase(): buyuk kucuk farketmezsiniz esitligi kontrol eder
+            19.concat():String degerlerini birlestirme
+            ASCII table: karakterlerin sayısal degerlerinin oldugu site
          */
 
         // soru 1)Girilen iki String veriyi karşılaştıran Java kodu yazınız
 
-        String str1 = "fotograf";
-        String str2 = "kamera";
+            String str="Java";
+            String str2="jAVA";
 
-        System.out.println(str1.equals(str2));
+            System.out.println(str.equalsIgnoreCase(str2));
     }
 }

@@ -12,9 +12,14 @@ public class StringManipulation02 {
 
     public static void main(String[] args) {
 
-        Scanner input = new Scanner(System.in);
-        System.out.print("Lütfen email adresinizi giriniz: ");
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Lutfen bir email adresi giriniz");
+        String email = scan.nextLine();
 
-
+        if (!email.contains("gmail.com")) {
+            System.out.println("Lutfen gmail adresi giriniz");
+        } else if (email.endsWith("gmail.com")) {
+            System.out.println("Email adresiniz kaydedildi");
+        } else System.out.println("lutfen yazimi kontol edin");
     }
 }
