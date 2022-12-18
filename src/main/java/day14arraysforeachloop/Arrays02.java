@@ -11,8 +11,8 @@ public class Arrays02 {
         int ages[] = new int[6];
         ages[0] = 20;
         ages[1] = 23;
-        ages[2] = 92;
-        ages[3] = 55;
+        ages[2] = 19;
+        ages[3] = 44;
         ages[4] = 15;
         ages[5] = 32;
 
@@ -27,7 +27,7 @@ public class Arrays02 {
         //2.YOL:
         int minimum = ages[0];
         int maximum = ages[0];
-
+        //  20, 23, 19, 44, 15, 32
         for (int w : ages) {
 
             minimum = Math.min(minimum, w);
