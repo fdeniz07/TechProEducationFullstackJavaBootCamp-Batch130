@@ -14,4 +14,5 @@ public class StringManipulation08 {
         boolean ikisinikontrol = ilkkarakerbuyukmu && sonkarakternoktami;
         System.out.println(ikisinikontrol);
     }
+
 }
