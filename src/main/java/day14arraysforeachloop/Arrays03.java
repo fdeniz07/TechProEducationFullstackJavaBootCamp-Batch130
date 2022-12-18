@@ -50,5 +50,9 @@ public class Arrays03 {
             }
         }
         System.out.println(Arrays.toString(newColors));// [Red, Blue, Green, Brown]
+
+        //arrayler collectionlara gore ilkel yapidadir, collectionlarda biz istedigimiz elemani silebiliyoruz
+        //fakat arraylerde elemanlari silmemiz icin yeni array olusturmamiz gerekiyor
+        // arrayler ilkel ama hizli, ilkel datalar hiz yonunden avantaj sagladigi icin kullanilir
     }
 }
