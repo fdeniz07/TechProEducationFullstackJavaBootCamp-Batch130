@@ -18,7 +18,8 @@ public class Q03_Ternary_NotSistemi {
                 "B" : notSayi > 69 ?
                 "C" : notSayi > 59 ?
                 "D" : notSayi > 49 ?
-                "E" : notSayi > -1 ? "F" : "0 ile 100 arasi bir not giriniz";
+                "E" : notSayi > -1 ?
+                "F" : "0 ile 100 arasi bir not giriniz";
 
         System.out.println("notHarf = " + notHarf);
 
