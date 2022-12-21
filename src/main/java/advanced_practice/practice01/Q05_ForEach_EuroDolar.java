@@ -19,6 +19,8 @@ public class Q05_ForEach_EuroDolar {
         String[] arr = str.split(" ");
         System.out.println(Arrays.toString(arr)); //[$1, $12, €34, €56, $45, €78]
 
+
+        //Note: Primitive data türlerine ilk deger atanmalidir.
         int dolarToplam = 0;
         int euroToplam = 0;
 
