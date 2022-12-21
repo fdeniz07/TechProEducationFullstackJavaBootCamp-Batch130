@@ -27,7 +27,7 @@ public class Q06_WhileLoop_IlkVeSonRakam {
         //2.YOL
         String sayiString = String.valueOf(sayi);
         int strIlkRakam = Integer.parseInt(sayiString.substring(0, 1));
-        int strSonRakam = Integer.valueOf(sayiString.substring(sayiString.length() - 1));
+        int strSonRakam = Integer.parseInt(sayiString.substring(sayiString.length() - 1)); // Integer.valueOf(sayiString.substring(sayiString.length() - 1)); seklinde de olur
         System.out.println("Toplam = " + (strSonRakam + strIlkRakam));
 
     }
