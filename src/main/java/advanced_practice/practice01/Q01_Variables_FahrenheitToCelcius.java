@@ -2,7 +2,7 @@ package advanced_practice.practice01;
 
 import java.text.DecimalFormat;
 import java.util.Scanner;
-public class Q01_Variable_Fahrenheit {
+public class Q01_Variables_FahrenheitToCelcius {
     // Fahrenheit değeri, Celsius değere çeviren kod yazınız.
     // formül: c = (f-32)*5/9
 
