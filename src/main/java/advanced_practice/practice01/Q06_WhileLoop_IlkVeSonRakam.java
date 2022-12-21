@@ -2,7 +2,7 @@ package advanced_practice.practice01;
 
 import java.util.Scanner;
 
-public class CQ06_WhileLoop_IlkVeSonRakam {
+public class Q06_WhileLoop_IlkVeSonRakam {
     //Kullanıcıdan alınan bir sayının ilk ve son rakamlarını toplayan bir kod yazınız.
 
     public static void main(String[] args) {
