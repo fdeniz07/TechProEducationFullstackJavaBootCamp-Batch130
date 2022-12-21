@@ -2,7 +2,7 @@ package advanced_practice.practice01;
 
 import java.util.Scanner;
 
-public class Q02_Variable_Hipotenus {
+public class Q02_Variables_Hipotenus {
     //Hipotenüs hesaplayan bir kod yazınız.
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
