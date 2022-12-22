@@ -9,9 +9,18 @@ public class C02_Arrays {
 
         String str = "Java ögrenince para kazanmak ne kolay, ögrenmeyince ne kadar zor.";
 
+        
+        //I.YOL : use replaceAll()
+        int vowels = str.replaceAll("[^aeioöuüAEIOÖUÜ]","").length();
+        System.out.println("vowels = " + vowels);
+
+        System.out.println("//////////////////////////");
+        
+        //II.YOL : use Array - Loop
+
         str = str.toLowerCase();
-        String words[] = str.split("");
-        System.out.println(Arrays.toString(words));
+        String letters[] = str.split("");
+        System.out.println(Arrays.toString(letters));
         //[j, a, v, a,  , ö, g, r, e, n, i, n, c, e,  , p, a, r, a,  , k, a, z, a, n, m, a, k,  , n, e,  , k, o, l, a, y, ,,
         // , ö, g, r, e, n, m, e, y, i, n, c, e,  , n, e,  , k, a, d, a, r,  , z, o, r, .]
 
@@ -19,7 +28,7 @@ public class C02_Arrays {
 
         //Note : iter ==> for each loop kisayolu
 
-        for (String w : words) {
+        for (String w : letters) {
 
             switch (w) {
                 case "a":
