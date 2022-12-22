@@ -1,4 +1,4 @@
-package day15arraysmultidimensionalarrays;
+package day15arrays;
 
 public class C04_Arrays {
     // Bir Arrayin icinde herhangi bir elemanin olup olmadigini

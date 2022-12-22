@@ -1,4 +1,4 @@
-package day15arraysmultidimensionalarrays;
+package day15arrays;
 
 import java.util.Arrays;
 
