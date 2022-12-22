@@ -44,6 +44,9 @@ public class C05_Arrays {
         //Note : Arrays.sort(crr,Comparator.comparingInt(String::length).reversed() burada java karakter sayisina göre kücükten büyüge dogru siralarken
         //       Arrays.sort(crr,Comparator.comparingInt(String::length).reversed().thenComparing(Comparator.naturalOrder())) hem yukaridaki isi yapar, hem de kendi icerisinde
         //       alfabetik siralamaya göre islem yapar.
+        //       reversed==> buyukten kucuge diz
+        //       thencomparing==> iceri gir iceriyi de duzenle
+        //       Comparator.naturelorder==> iceride dogal siralama yap; yani alfebetik siralama yap
 
         //Note 2 : Java'daki  varolan methodlari kullanmak Functional Programming(Lambda) denilir.
     }
