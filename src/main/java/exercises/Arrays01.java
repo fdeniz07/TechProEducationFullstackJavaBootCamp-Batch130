@@ -40,7 +40,7 @@ public class Arrays01 {
 
         int arr3[] = new int[3];
 
-        System.out.println(arr3[1]);
+        System.out.println(arr3[1]); // NOTE: *** array int oldugu icin 0 yazdirir. String olsa idi null , char olsa idi bos(hcilik) yazdirirdi
 
 
         arr3[0] = 11;
@@ -48,7 +48,8 @@ public class Arrays01 {
         arr3[1] = 12;
 
         System.out.println(Arrays.toString(arr3));
-        // Ekran ciktisi nedir? //[11, 12, 0]
+        // Ekran ciktisi nedir? //0
+                                // [11, 12, 0]
 
         //Question6:
         int arr4[] = {3, 2, 3, 4, 4, 5};
