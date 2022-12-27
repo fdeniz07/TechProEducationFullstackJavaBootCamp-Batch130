@@ -1,5 +1,6 @@
 package practice.advanced_practice.practice03;
 
+import java.nio.file.OpenOption;
 import java.util.Scanner;
 
 public class Q06_ForLoop_Continue {
@@ -11,6 +12,7 @@ public class Q06_ForLoop_Continue {
       */
 
     public static void main(String[] args) {
+
 
         Scanner input = new Scanner(System.in);
         int toplam = 0;
