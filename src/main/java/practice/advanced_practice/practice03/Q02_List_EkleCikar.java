@@ -26,25 +26,27 @@ public class Q02_List_EkleCikar {
 
             if (komut.equalsIgnoreCase("add")) {
 
-                System.out.println("Eklmek istediğiniz tamsayıyı giriniz");
+                System.out.println("Eklemek istediğiniz tamsayıyı giriniz");
+                int eklenecekSayi = input.nextInt();
+                list.add(eklenecekSayi);
 
-                list.add(input.nextInt());
             } else if (komut.equalsIgnoreCase("set")) {
 
-                System.out.println("Güncellemek istediğiniz sayının ineksini giriniz");
-                int guncellenecekIndex = input.nextInt();
-
+                System.out.println("Güncellemek istediğiniz sayıyı giriniz");
+                Integer guncellenecekSayi = input.nextInt();
+                int guncellenecekIndex = list.indexOf(guncellenecekSayi);
                 System.out.println("Yerine eklemek istediğiniz sayıyı giriniz");
                 int yeniSayi = input.nextInt();
-
                 list.set(guncellenecekIndex, yeniSayi);
+
             } else if (komut.equalsIgnoreCase("remove")) {
 
                 System.out.println("Silmek istediğiniz sayıyı giriniz");
                 Integer silinecekSayi = input.nextInt();
-
                 list.remove(silinecekSayi);
+
             } else if (komut.equalsIgnoreCase("break")) {
+
                 break;
             } else {
                 System.out.println("Geçerli bir komut giriniz");
