@@ -133,5 +133,31 @@ public class ArrayLists01 {
         a.remove("Shoes");
         System.out.println("a = " + a);
 
+        System.out.println("///////////////////////////////////////");
+
+        // 5) ArrayList'imizden coklu data'nin olup olmadigini nasil göstereiriz?
+
+        //containsAll() : Bir listin icinde coklu elemanin olup olmadigini kontrol eder 
+        // Hepsi varsa true; en az bir tanesi yoksa false verir.
+
+        List<String> myNames = new ArrayList<>();
+        myNames.add("Burcu");
+        myNames.add("Can");
+        myNames.add("Zisan");
+        myNames.add("Emre");
+        myNames.add("Bilal");
+        myNames.add("Gül");
+        System.out.println("myNames = " + myNames);
+        
+        
+        List<String> varMi = new ArrayList<>();
+        varMi.add("Burcu");
+        varMi.add("Can");
+        varMi.add("Ebubekir");
+        
+        boolean sonuc= myNames.containsAll(varMi);
+        System.out.println("sonuc = " + sonuc);
+
+
     }
 }
