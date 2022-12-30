@@ -1,4 +1,4 @@
-package SSG.StringManipulations;
+package ssg.stringmanipulations;
 
 public class StringManipulation04 {
     /*soru 4)Kişi isimleri için 3 String değişken oluşturunuz. Boşluk karakterleri hariç 3 isimdeki
