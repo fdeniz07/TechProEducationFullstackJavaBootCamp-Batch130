@@ -1,4 +1,4 @@
-package day18arraylists;
+package day18lists;
 
 import java.util.ArrayList;
 import java.util.List;
