@@ -1,4 +1,4 @@
-package ssg.stringmanipulations;
+package ssg.ssg05stringmanipulations;
 
 import java.util.Scanner;
 

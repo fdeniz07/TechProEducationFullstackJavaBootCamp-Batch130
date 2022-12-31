@@ -1,4 +1,4 @@
-package ssg.switchcase;
+package ssg.ssg09switchcase;
 
 import java.util.Scanner;
 

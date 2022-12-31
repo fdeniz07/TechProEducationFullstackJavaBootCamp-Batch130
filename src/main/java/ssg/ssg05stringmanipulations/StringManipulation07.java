@@ -1,8 +1,8 @@
-package ssg.stringmanipulations;
+package ssg.ssg05stringmanipulations;
 
 public class StringManipulation07 {
     /*
-    girilen Stringdeki tum rakamları "*" ile degistirin
+      Soru 7: girilen Stringdeki tum rakamları "*" ile degistirin
     */
     public static void main(String[] args) {
         String str = "bu4ak1";
