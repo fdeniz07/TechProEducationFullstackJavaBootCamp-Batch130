@@ -1,4 +1,4 @@
-package ssg.forloops;
+package ssg.ssg10forloop;
 
 import java.util.Scanner;
 public class C09_ForLoops {

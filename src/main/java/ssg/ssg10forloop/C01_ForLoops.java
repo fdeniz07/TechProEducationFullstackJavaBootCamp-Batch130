@@ -1,4 +1,4 @@
-package ssg.forloops;
+package ssg.ssg10forloop;
 
 public class C01_ForLoops {
     public static void main(String[] args) {
