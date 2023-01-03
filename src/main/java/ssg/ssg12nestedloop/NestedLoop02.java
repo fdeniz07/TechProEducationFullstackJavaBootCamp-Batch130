@@ -10,8 +10,8 @@ public class NestedLoop02 {
          * * *
          * * * *
          * * * * *
-            // nested for loop ya diktorgen veya ucgen formatinda olabilir
-           diktorgen istedigimizde iki loop icin de bagimsiz en point belirleriz
+            // nested for loop ya dikdortgen veya ucgen formatinda olabilir
+           dikdortgen istedigimizde iki loop icin de bagimsiz en point belirleriz
            ucgen sekli vermek icin inner loop'un end point'ini olarak outer degiskene bagli yapariz
        */
 
