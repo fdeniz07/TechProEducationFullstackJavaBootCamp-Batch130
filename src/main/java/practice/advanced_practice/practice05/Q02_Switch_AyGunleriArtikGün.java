@@ -10,15 +10,6 @@ public class Q02_Switch_AyGunleriArtikGün {
        Çıktı: 29
     */
 
-    //Belirli bir yılın "Artık yıl" olup olmadığını kontrol etmek için kodu yazınız.
-    //Artık Yıl:
-    //1.Yıl 4 ile eşit bölünebilir ise, adım 2'e gidin. Aksi durumda, 5. adıma gidin.
-    //2.Yıl 100 ile eşit bölünebilir ise, adım 3'e gidin. Aksi durumda, 4. adıma gidin.
-    //3.Yıl 400 ile eşit bölünebilir ise, adım 4'e gidin. Aksi durumda, 5. adıma gidin.
-    //4.Yıl artık yıldır (366 gün vardır).
-    //5.Yıl artık yıl değildir (365 gün vardır).
-
-
     public static void main(String[] args) {
 
         Scanner input = new Scanner(System.in);
