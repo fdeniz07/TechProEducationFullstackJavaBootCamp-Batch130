@@ -1,4 +1,4 @@
-package practice.regular_practice.practiceDTNT;
+package practice.regular_practice.practiceDTNT.practice03;
 
 import java.util.Arrays;
 
