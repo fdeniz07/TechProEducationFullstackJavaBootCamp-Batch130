@@ -25,15 +25,15 @@ public class Varargs01 {
         String str4 = "Cok";
         String str5 = "Guzel";
 
-        concat(str1,str2,str3,str4,str5);
+        concat(str1, str2, str3, str4, str5);
 
     }
 
     private static void concat(String... str) {
 
-        String cumle="";
+        String cumle = "";
         for (String w : str) {
-            cumle += w+" ";
+            cumle += w + " ";
         }
         System.out.println("cumle = " + cumle);
 
