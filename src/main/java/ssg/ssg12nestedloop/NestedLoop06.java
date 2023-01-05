@@ -23,6 +23,8 @@ public class NestedLoop06 {
                 System.out.print(" ");
             }
             System.out.println("|");
+
+            System.out.println();
         }
     }
 }
