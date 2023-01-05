@@ -33,6 +33,5 @@ public class C01_Lists {
         sanatci.subList(1, 3);
         System.out.println(sanatci.subList(1, 3));
         //subList sout'un icinde yazdirilabilir ya da atama yapip conteyner'in adi yazdirilabilir
-
     }
 }
