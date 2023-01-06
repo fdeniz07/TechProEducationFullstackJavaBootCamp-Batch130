@@ -1,5 +1,7 @@
 package day21statickeyword;
 
+import java.util.List;
+
 public class StdRunner {
 
     public static void main(String[] args) {
@@ -30,6 +32,8 @@ public class StdRunner {
         String s = std1.getInitials("Ali Can");
         System.out.println(s);
 
-
+        //List olusturmada yeni bir isilti
+        List<String> names = List.of("Ali", "Veli", "Can", "Kemal");
+        System.out.println(names);
     }
 }
