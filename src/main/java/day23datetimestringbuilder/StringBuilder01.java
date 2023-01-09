@@ -66,5 +66,45 @@ public class StringBuilder01 {
 
         sb3.insert(2,"XXXXXX");//FlXXXXXXo
         System.out.println(sb3);
+        //toString() method'u StringBuilder'i String'e cevirir.
+        //String Class'da var olan ama StringBuilder Class var olmayan split() method gibi
+        //method'lara ihtiyac duydugumuzda toString() method'unu kullanarak String Class gecer ve o method'lari kullaniriz.
+        sb3.toString().split("l");
+
+        //String'i tekrar StringBuilder'a cevirebilirsiniz
+        StringBuilder sb4 = new StringBuilder(sb3);
+
+        //reverse() method'u String'leri ters cevirir.
+        sb3.reverse();
+        System.out.println(sb3);//oXXXXXXlF
+
+        //deleteCharAt(1); index 1 deki character'i siler.
+        sb3.deleteCharAt(1);
+        System.out.println(sb3);//oXXXXXlF
+
+        //delete(1, 6); index 1 deki character'den index 5(6 dahil olmadigi icin 5 yazdim) deki
+        //character'e kadar tum characterleri siler.
+        sb3.delete(1, 6);
+        System.out.println(sb3);//olF
+
+        StringBuilder sb5 = new StringBuilder("Kava");
+        StringBuilder sb6 = new StringBuilder("Java");
+
+        //sb5.compareTo(sb6) method'u sb5 ile sb6 yi alphabetic siralama olarak karsilastirir.
+        //sb5 alphabetic siralamada once ise sonuc negative olur, sonra ise sonuc positive olur.
+        System.out.println(sb5.compareTo(sb6));//-1
+
+        //setCharAt(2, 'm'); index 2 deki character'i 'm' ye cevirir
+        sb6.setCharAt(2, 'm');
+        System.out.println(sb6);//Jama
+
+        sb6.replace(1, 3, "xyz");
+        System.out.println(sb6);//Jxyza
+
+        //StringBuilder Class'da kullanmamiza izin verilen substring() method gibi bazi String Class method'lari vardir,
+        //bu method'lari StringBuilder ustunde kullaninca StringBuilder'in orijinal degeri degismez
+        String s7 = sb6.substring(1, 3);
+        System.out.println(s7);//xy
+        System.out.println(sb6);//Jxyza
     }
 }
