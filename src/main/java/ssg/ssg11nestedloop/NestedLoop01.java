@@ -1,4 +1,4 @@
-package ssg.ssg12nestedloop;
+package ssg.ssg11nestedloop;
 
 public class NestedLoop01 {
 

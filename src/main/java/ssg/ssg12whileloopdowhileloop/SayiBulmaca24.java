@@ -1,4 +1,4 @@
-package ssg.ssg13whileloopdowhileloop;
+package ssg.ssg12whileloopdowhileloop;
 
 import java.util.Scanner;
 

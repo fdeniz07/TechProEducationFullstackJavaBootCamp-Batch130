@@ -1,4 +1,4 @@
-package ssg.ssg13whileloopdowhileloop;
+package ssg.ssg12whileloopdowhileloop;
 
 public class WhileLoop01 {
     public static void main(String[] args) {
