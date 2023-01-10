@@ -1,7 +1,6 @@
 package practice.advanced_practice.practice07;
 
 public class Sirket {
-
     static int kasa;
     int depButcesi;
     int depKazandigiParaToplami;
