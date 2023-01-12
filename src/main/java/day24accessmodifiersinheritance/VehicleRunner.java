@@ -9,6 +9,5 @@ public class VehicleRunner {
         HondaAccord endut=new HondaAccord(250000,2020);
         System.out.println("endut = " + endut);
 
-
     }
 }
