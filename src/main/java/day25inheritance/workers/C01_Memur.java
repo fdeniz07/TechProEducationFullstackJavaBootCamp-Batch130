@@ -1,4 +1,4 @@
-package day25inheritance;
+package day25inheritance.workers;
 
 public class C01_Memur extends C03_Muhasebe {
 

@@ -1,4 +1,4 @@
-package day25inheritance;
+package day25inheritance.lessons;
 
 public class A04_Lessons {
     public void liveSessions( ){

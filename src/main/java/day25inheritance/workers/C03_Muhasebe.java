@@ -1,4 +1,4 @@
-package day25inheritance;
+package day25inheritance.workers;
 
 public class C03_Muhasebe extends C04_Personel { //baba parent = Super Class
 
