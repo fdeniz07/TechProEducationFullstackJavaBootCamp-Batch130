@@ -13,6 +13,9 @@ public class C08_mda {
                 b)bir sagdaki konuma tasiyacak bir program yazin.
          */
 
+
+        //a) Sola Kaydirma
+
         int[][] sayilar1 = {{3, 2, 1}, {4, 5, 1, 9, 5}, {6, 7, 8}};
 
         System.out.println("Baslangic : " + Arrays.deepToString(sayilar1));
@@ -31,6 +34,9 @@ public class C08_mda {
         }
         System.out.println("Sola kaydirilmis : " + Arrays.deepToString(sayilar1));
 
+
+
+        //b) Saga kaydirma
 
         int[][] sayilar2 = {{3, 2, 1}, {4, 5, 1, 9, 5}, {6, 7, 8}};
 
