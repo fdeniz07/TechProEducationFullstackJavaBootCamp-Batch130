@@ -30,12 +30,34 @@ package day26overriding;
 
   10)Method'un return type'i "void" ise Overriding yaparken return type degistirilemez.
 
+  11) Final kelimesini "Variable"larda kullanabilirsiniz.
+                        ->final variable ise
+                        i) mutlaka değer atanmalıdır
+                        ii) ilk atanan değer değiştirilemez
+
+  12)Final kelimesini "Method" larda kullanabilirsiniz.
+                         ->method final ise;
+                          i)methodun body'si değiştirilemez
+                          ii)method body'si değiştirilemeyince override yapmak mümkün olmaz
+
+  13)Final kelimesini "Class"larda kullanabilirsiniz.
+                         ->class final ise;
+                           i)o class'ın child'ı olamaz
+
+ 14) "final" method'lar ve "static" method'lar "override"  edilemezler.
+
+ 15)"Override" yapabilmek icin "Inheritance" sarttir. Baska bir ifadeyle; Parent-Child iliskisi sarttir.
+
+ 16) Method Overloading "Compile Time Polymorphism" dir, Method Overriding "Run Time Polymorphism" dir.
+
+ 17) Method Overloading "static Polymorphism" dir, Method Overriding "dynamic Polymorphism" dir.
  */
+
 
 public class Animal {
 
-    public void eat() {
-        System.out.println("Animals eat..."); //Parent'daki override edilmis eat() method'una "Overriding Method" denir-
+    public void eat() { //Parent'daki override edilmis eat() method'una "Overriding Method" denir.
+        System.out.println("Animals eat...");
     }
 
     public void drink() {
