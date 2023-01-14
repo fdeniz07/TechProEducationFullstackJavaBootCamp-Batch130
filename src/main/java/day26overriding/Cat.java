@@ -20,4 +20,14 @@ public class Cat extends Mammal {
     public Animal create() {
         return new Cat();
     }
+
+    @Override
+    public int add(int a, int b) {
+        return a + b;
+    }
+
+    @Override
+    public Integer multiply(int a, int b) {
+        return a * b;
+    }
 }

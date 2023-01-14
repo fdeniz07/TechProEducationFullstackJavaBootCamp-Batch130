@@ -20,6 +20,16 @@ package day26overriding;
 
   7)Child class'da override edilen method'un(Overriding Method) return typ'i methodu'un return ettigi data type'inin aynisi veya o data type'inin parent'i olarak secilir.
 
+  8)Method'un return type'i "primitive" ise, Overriding yaparken return type degistirilemez. Cunku return type ya
+    ayni olur ya da parent'dan secilir ama primitive'ler arasinda parent-child iliskisi olmadigindan parent'dan secmek
+    mevzu olamaz. O zaman tek secenek aynisi olmalidir kalir.
+
+  9)Method'un return type'i "Wrapper Class" ise Overriding yaparken return type degidtirilmez.Cunku; return type ya
+    ayni olur ya da parent'dan secilir. Ama Java bir wrapper class'i digerinin parent'i yapmadigindan parent''dan
+    secme ihtimali yoktur,geriye sadece aynisi olma ihtimali kalir.
+
+  10)Method'un return type'i "void" ise Overriding yaparken return type degistirilemez.
+
  */
 
 public class Animal {
@@ -38,5 +48,9 @@ public class Animal {
 
     public int add(int a, int b) {
         return a + b;
+    }
+
+    public Integer multiply(int a, int b) {
+        return a * b;
     }
 }
