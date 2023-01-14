@@ -2,12 +2,11 @@ package day25inheritance.vehicles;
 
 public class Car extends Vehicle {
 
-    public int price=11000;
+    public int price = 11000;
 
-    public void engine(){
+    public void engine() {
         System.out.println("Car engine");
     }
-
 
 
     public Car() {

@@ -21,16 +21,27 @@ public class Vehicle {
 
         8)Inheritance de variable'leri cagirmak icin "this" veya "super" kullanilir.
 
+        8)Inheritance'da variable'lari ve method'lari cagirmak icin "this" veya "super" kullanilir.
+          "this" ayni class icindeki variable'lari ve method'lari cagirmak icin kullanilir.
+          "super" parent class icindeki variable'lari ve method'lari cagirmak icin kullanilir.
 
+        9)Inheritance'da object kullanarak variable cagirirsaniz, object;in data type'ini temsil eden class'dan
+          variable'i aramaya baslayiniz. O class'da yoksa parent'lara bakiniz.
+
+        10)Inheritance'da object kullanarak method cagirirsaniz, object'in constructor'ini temsil eden class'dan
+          method'u aramaya baslayiniz. O class'da yoksa parent'lara bakiniz.
+
+          OOP Principals:
+          i)Inheritance +
+          ii)Polymorphism: Method Overloading + Method Overriding
+          iii)Encapsulation -
+          iv)Abstraction -
      */
-
     public int price = 12000;
 
-    public void engine(){
-        System.out.println("Vehicle engine");
+    public void engine() {
+        System.out.println("Vehicle engine..");
     }
-
-
 
     public Vehicle() {
         System.out.println("Vehicle 1");
