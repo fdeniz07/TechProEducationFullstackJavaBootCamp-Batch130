@@ -31,5 +31,15 @@ public class Q01_NestedLoop_AtbashCode {
                 }
             }
         }
+
+        //2. Yol:
+        System.out.println("\n===2. Yol===");
+
+        for (int i = 0; i < kelime.length(); i++) {
+
+            int idx = 'z' - kelime.charAt(i);
+            System.out.print((char) ('a' + idx));
+
+        }
     }
 }
