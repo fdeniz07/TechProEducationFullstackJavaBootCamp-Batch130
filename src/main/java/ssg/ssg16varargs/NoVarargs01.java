@@ -1,4 +1,4 @@
-package ssg.varargs;
+package ssg.ssg16varargs;
 
 public class NoVarargs01 {
     public static void main(String[] args) {
