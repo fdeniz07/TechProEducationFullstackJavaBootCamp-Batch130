@@ -20,16 +20,16 @@ public class Q03_ForLoop_RakamlarToplami {
         System.out.println("Bir deger giriniz");
         String deger = input.nextLine();
 
-        System.out.println(rakmalarToplami(deger));
+        System.out.println(rakamlarToplami(deger));
     }
 
-    static double rakmalarToplami(String str) {
+    static double rakamlarToplami(String str) {
         int toplam = 0;
 
         for (int i = 0; i < str.length(); i++) {
 
             if (Character.isDigit(str.charAt(i))) {
-                toplam += Integer.valueOf("" + str.charAt(i)); //Char i önce stringe daha sonrada Integer e ceviriyoruz
+                toplam += Integer.parseInt("" + str.charAt(i)); //Char i önce stringe daha sonrada Integer e ceviriyoruz
             }
         }
         System.out.println("toplam = " + toplam);
