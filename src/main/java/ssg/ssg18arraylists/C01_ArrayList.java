@@ -3,7 +3,7 @@ package ssg.ssg18arraylists;
 import java.util.ArrayList;
 import java.util.List;
 
-public class C01_arrayList {
+public class C01_ArrayList {
     public static void main(String[] args) {
         List<Integer> myList = new ArrayList<>();
         myList.add(10);
