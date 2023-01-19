@@ -1,6 +1,6 @@
 package day24accessmodifiersinheritance;
 
-public class Animal {
+public class  Animal {
 
     /*
         Inheritance'in faydalari;
@@ -21,6 +21,11 @@ public class Animal {
         Note 8: Child --> Parent --> Grand Parent --> Grand Grand Parent ... seklinde ilerleyen inheritance'lara "Multi Level Inheritance" denir.
         Note 9: Java'da "Object Class" tum Java Class'larinin ortak parent'idir.
         Note 10: Java'da Object Class haric tum class'larin parent'i vardir.
+        Note 11: Java'da "parent" dan "child"a olan iliskilere "HAS-A Relationship" denir.
+                 Java'da "child" dan "parent"a olan iliskilere "IS-A Relationship" denir.
+        Note 12: Java'da her class'in bir tane default constructor'u vardir.
+                 Bu default constructor class'in icinde görünmez.Cünkü default constructor "Object Class"in icindedir.
+                 Bizim class'imiz default constructor'a ihtiyac duydugunda parent olan "Object Class"a gider ve oradaki constructor'i cagirir.
      */
 
     public void eat() {
