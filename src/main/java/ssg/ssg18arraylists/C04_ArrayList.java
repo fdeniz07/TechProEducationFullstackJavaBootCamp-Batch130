@@ -3,7 +3,7 @@ package ssg.ssg18arraylists;
 import java.util.ArrayList;
 import java.util.List;
 
-public class C04_aArayList {
+public class C04_ArrayList {
     public static void main(String[] args) {
         /*
         bir dogal sayi listesi olusturun
