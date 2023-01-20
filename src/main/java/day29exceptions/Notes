@@ -1,0 +1,78 @@
+Java.io paketinin FileInputStream sinifi,
+    dosyalardan verileri (bayt cinsinden) okumak icin kullanilir.
+    InputStream soyut (Abstract) sinifini miras alir.
+    Java’da kontrol altına alınabilen hatalara Exception ismi verilir.
+    Exception, program çalıştığı esnada ortaya çıkan, beklenmeyen ve öngörülemeyen hatalara verilen isimdir. Bu hatalar, program akışını sonlandırarak normal bir biçimde çalışmasına mani olur. Exception’ları Error dediğimiz diğer hatalardan ayıran en büyük özellikleri, handle edilebilmeleridir. Yani bu tür hatalar, programcılar tarafından belirli kodlarla idare edilebilir ve kontrol altına alınabilirler. Bu da programın belirlenen senaryolarla çalışmasına devam ettirmesini mümkün kılar.
+    Java’da bir exception durumu oluştuğunda, sistem bir  exception objesi oluşturur.
+    Bu obje, yaşanan hata ile ilgili detaylı bilgiler içerir.
+    Bu bilgiler arasında, exception ismi ve açıklaması gibi bilgiler yer alır.
+    Java’da bir exception çok farklı sebeplerden ötürü ortaya çıkabilir. Bu sebepler arasında,
+    Kullanıcı tarafından girilen hatalı veri
+    İnternet kesintileri
+    Kod hataları
+    Erişilemeyen veriler
+    Cihaz ve bellek ile ilgili problemler vs. vardır.
+    Exception Türleri
+    Java’daki tüm Exception ve Error türleri, Throwable isimli parent class’ın
+    subclass’ları konumundadır. Exception class’ının altında ise iki ana alt sınıf bulunur.
+    Bu sınıflar Checked Exception ve Unchecked Exception’lardır.
+    Checked Exception
+    Aynı zamanda Compile-Time Exception olarak isimlendirilen
+    Checked Exception’lar, compile-time sırasında compiler tarafından check edilen,
+     kontrol edilen exception’lardır. Yani bu hatalar, kod yazıldığı esnada tespit edilir ve
+     programcıya bildirilir. Programcının bu tür hataları gözardı etmesi mümkün değildir.
+    Unchecked Exception
+    Beklenmeyen, öngörülemeyen, program çalışmadan kontrol edilemeyen
+    exception’lara Unchecked Exception ismi verilir. Bu tür exception’lar
+    runtime exception olarak da isimlendirilirler. Bunun sebebi, bu hataların
+    compile-time’da değil runtime’da yani program çalıştığı esnada ortaya çıkmasıdır.
+    Exception handling,  hataların, programcı tarafından kontrol edilmesi, kontrol altına alınmasıdır.
+    Java’da bir exception’ın handle edilmesinde try-catch-finally, throw-throws keyword’leri kullanılır.
+    Bu kelimelerin izahları şu şekildedir.
+    Kelime  Tanım
+    try{}   “try” anahtar kelimesi, yapılacak işlemin ekleneceği kod blokuna verilen isimdir.
+    try tek başına kullanılamaz. catch veya finally ona eslik etmek durumundadır.
+    catch(){}   “catch”, ortaya çıkabilecek hatayı yakalamak icin kullanılır. catch parantezine
+    exception class ismi referans obje adı, kod blok’unun içerisine ise, exception durumunda çalışacak kodlar yazılır.
+    finally{}   Exception olsa da olmasa da çalıstırılacak olan kodların yazıldığı bölümüdür. Her iki durumda da muhakkak çalışır.
+    throw   Bir exception fırlatmak için kullanılır.
+    throws  Bir veya birden fazla exception’ı bildirmek için metod signature’da kullanılır.
+   ======================================================
+    En Sık Karşılaşılan RunTime (Unchecked) Exception’lar
+   ======================================================
+    ArithmeticException: Java matematiksel işlemler ile ilgili muhtemel tum istisna
+    ve hataları ArithmeticException class’ına koymuştur. Dolayısı ile bir sayının sıfıra
+    bölünmesi gibi matematiksel hatalarda, ArithmeticException fırlatılır.
+    NullPointerException: Java’da en çok karşılaşılan exception türlerinden bir tanesidir.
+     Örneğin null bir değer sahip bir string’in length’i ölçmeye çalışan kod, NullPointerException verecektir.
+    ArrayIndexOutOfBoundsException: Array veya List’te bulunmayan bir index için işlem
+    yapılmak istendiğinde Java ArrayIndexOutOfBoundsException hatası verir.
+    NumberFormatException: Sayı formatında olmayan bir String’i sayıya dönüştürmek istediğimiz
+    Java, NumberFormatException hatası verir.
+    StringIndexOutOfBoundsException: Eğer bir String’den character/ler alırken olmayan bir
+     index kullanılırsa, StringIndexOutOfBoundsException hatası verilir.
+    IllegalArgumentException: Genellikle throw yapmak için kullanılır. Geçersiz bir argüman
+    girildiğinde, karşı tarafa IllegalArgumentException gönderilir. Örneğin yaş bilgisi negatif
+    olarak girildiğinde, bu exception throw edilebilir.
+    Bunların dışında, ClassCastException, DateTimeException, ArrayStoreException,
+     UnsupportedOperationException, NoSuchElementException, ConcurrentModificationException
+     gibi farklı exception’lar da mevcuttur.
+    Exception Metodları
+    Exeption handle edilirken kullanılan bazı metodlar vardır. Bu metodlar, referans obje üzerinden kullanılır.
+    printStackTrace(): Bu metod, exception bilgilerini, oldukça detaylı bir şekilde ekrana yazdırır.
+    Herhangi bir print işlemi yapmaya gerek yoktur. Zaten kendisi bir print işlemi yapar.
+    toString(): Bu metod, exception ismini ve exception’un sebebini return eder.
+    Ekrana yazdırmak için print edilmesi gerekir.
+    getMessage(): Yalnızca exception’un açıklamasını return eder. print edilmesi gerekir.
+    Bir dosya giris akisi olusturmak icin once
+    java.io.FileInputStream paketini ice aktarmaliyiz.
+    Paketi ice aktardiktan sonra, Java'da bir dosya
+    giris akisini nasil olusturabilecegimizi burada bulabilirsiniz.
+     FileInputStream Metotlari:
+     FileInputStream sinifina ait metotlar :
+    1) read() : Dosyadan tek baytlik veri okur.
+    2) read(byte[] array) : dosyadan verileri bayt
+       cinsinde okur ve belirtilen dizide depolar
+    3) available() ==> Kullanilabilir byte sayisi
+    4) skip() ==> Belirtilen bayt sayisini atlamak
+       icin skip () yontemini kullanabiliriz.
