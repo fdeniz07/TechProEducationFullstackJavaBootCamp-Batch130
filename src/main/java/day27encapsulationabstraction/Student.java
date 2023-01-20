@@ -53,6 +53,8 @@ public class Student {
     //set method'lar (setter) isimleri set + variable name seklinde olur.
     //set method'lar (setter) variable ile ayni data type'inda parametre kullanilirlar.
 
+    //getter ve setter'larin ikisine birden "java beans" denir
+
     public void setGpa(double gpa) {
         this.gpa = gpa;
     }
@@ -65,5 +67,6 @@ public class Student {
         this.stdId = stdId;
     }
 
-    //getter ve setter'larin ikisine birden "java beans" denir
+
+
 }
