@@ -21,6 +21,9 @@ public class Exceptions01 {
 
       5)Yazdiginiz kod calismadiginda problemi bulmak icin "Log" lara bakariz.
 
+      6)if else kullanirsak olusabilecek her problemi spesifik olarak if parantezinin icine yazmamiz gerekir.
+        Bu da ciddi bir matematik bilgisi gerektirir ve yazacagimiz code u cok uzatir.
+        Ama try catch'te Java ilgili Exception ile alakali olusabilecek butun problemleri yakalar.
     */
 
     public static void main(String[] args) {
@@ -29,15 +32,29 @@ public class Exceptions01 {
         int b = 0;
 
         divide(a, b);
+        divide2(a, b);
     }
 
+    //ArithmeticException yazdiginiz code'da matematiksel islem kullaniyorsaniz alinabilecek bir Exception'dur.
+    //Nasil handle edilebilecegini asagida yazdik.
     public static void divide(int a, int b) {
 
         try {
             System.out.println(a / b);
+
+            System.out.println("I'm here");
         } catch (ArithmeticException e) {
             System.out.println("Do not divide by zero");
         }
+        System.out.println("You are here");
+    }
 
+    //"Exception Handling" de if-else kullanilmaz. Bakiniz 6.Note
+    public static void divide2(int a, int b) {
+        if (b == 0) {
+            System.out.println("Do not divide by zero");
+        } else {
+            System.out.println(a / b);
+        }
     }
 }
