@@ -69,9 +69,21 @@ public class LinkedList01 {
 
         //Retrieves, but does not remove, the head (first element) of this list. (Copy + Paste)
         //Returns: the head of this list, or null if this list is empty
+        //Ilk elemani silmeden size verir
         String r2 = names.peek();
         System.out.println(r2);//Steve
         System.out.println(names);//[Steve, Carl, Megan, Brandon, Süleyman]
+
+
+        //Retrieves and removes the head first element of this list.(Cut + Paste)
+        //Returns:the head of this list, or null if this list is empty
+        //remove() bos LinkedList'te kullanilirsa "hata verir", poll() bos LinkedList'te kullanilirsa "null" verir.
+        names.poll();
+
+
+        //Pop removes and returns the first element of this list.(Cut + Paste)
+        //This method is equivalent to removeFirst().
+        names.pop();
     }
 }
 
