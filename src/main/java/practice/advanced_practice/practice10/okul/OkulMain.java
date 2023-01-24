@@ -37,11 +37,39 @@ public class OkulMain {
         System.out.println("Maksimum ögrenci sayisini giriniz:");
         okul.setMaxOgrenciSayisi(scanner.nextInt());
 
-        List<Ogrenci> ogrenciList = new ArrayList<>();
+        //  List<Ogrenci> ogrenciListesi = new ArrayList<>();
 
-        for (int i = 0; i < okul.getMaxOgrenciSayisi(); i++) {
+        for (int i = 1; i <= okul.getMaxOgrenciSayisi(); i++) {
+            scanner.nextLine(); //dummy scanner
 
-            ogrenciList.add(i,new Ogrenci());
+            // ogrenciList.add(i,new Ogrenci());
+            Ogrenci ogrenci = new Ogrenci();
+            System.out.println(i + ". ögrenci ad: ");
+            ogrenci.setAd(scanner.nextLine());
+
+            System.out.println(i + ". ögrenci soyad: ");
+            ogrenci.setSoyAd(scanner.nextLine());
+
+            System.out.println(i + ". ögrenci yas: ");
+
+            try {
+                ogrenci.setYas(scanner.nextInt());
+                if (ogrenci.getYas() < 8 || ogrenci.getYas() > 15) {
+                    throw new ArithmeticException();
+                }
+            } catch (ArithmeticException e) {
+                System.out.println("Ögrenci yasi 8-15 araliginda olmalidir");
+                i--;
+                continue; //döngüyü kirmadan, hata alindiginda tekrardan giris yapilmasini saglar
+            } catch (Exception exception) {
+                System.out.println("8-15 araliginda bir SAYI giriniz");
+                i--;
+                continue;
+            }
+//            ogrenciListesi.add(ogrenci);
+//            okul.setOgrenciListesi(ogrenciListesi);
+
+            okul.addOgrenciToList(ogrenci);
         }
 
         System.out.println(okul);

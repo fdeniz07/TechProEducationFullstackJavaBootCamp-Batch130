@@ -43,6 +43,11 @@ public class Okul {
         this.ogrenciListesi = ogrenciListesi;
     }
 
+
+    public void  addOgrenciToList(Ogrenci ogrenci){
+        this.ogrenciListesi.add(ogrenci);
+    }
+
     @Override
     public String toString() {
         return "okulAdi='" + okulAdi + '\'' +
