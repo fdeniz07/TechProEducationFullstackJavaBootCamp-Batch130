@@ -26,4 +26,5 @@ public class Q04_Random_AdOlusturma {
 
         System.out.println("sayac = " + sayac);
     }
+
 }
