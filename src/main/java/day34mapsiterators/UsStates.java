@@ -3,6 +3,14 @@ package day34mapsiterators;
 public enum UsStates {
 
     /*
+        1) Enum bir data deposudur.
+        2)Enum'in icine sabit, degisme ihtimali olmayan datalari koyariz.
+          Mesela yilin aylari, Haftanin gunleri, ABD'nin eyaletleri,
+          Honda icin yapilan App'lerde Crv, Accord class'lari enum'dir. vs vs vs
+        3)Sabit datalari app'in icine gommek icin enum kullaniriz.
+          App'ler "standalone" (kendi basina ayakta durabilmesi icin) olmasi gerektigi icin sabit datalari app'in icine gomeriz.
+
+
         Data deposudur.
         Sabit , degisme ihtimali olmayan datalari koyar
         Mesela haftanin gunleri,yilin aylari..
