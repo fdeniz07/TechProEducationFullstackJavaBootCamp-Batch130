@@ -1,9 +1,6 @@
 package practice.advanced_practice.practice13;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class Aile {
 
@@ -17,12 +14,13 @@ public class Aile {
     public Aile(String ad, String soyad, int yas, String... kardesler) {
 
         adSoyad.put(ad, soyad);
-
-        for (String w : kardesler) {
-            kardeslerList.add(w);
-        }
+        kardeslerList.addAll(Arrays.asList(kardesler));
         yasKardesler.put(yas, kardeslerList);
         aileMap.put(adSoyad, yasKardesler);
 
+    }
+
+    public Map<Map<String, String>, Map<Integer, List<String>>>  getAileMap() {
+        return aileMap;
     }
 }
