@@ -178,13 +178,21 @@ public class Lambda01 {
 
     //2.Yol:
     public static void getMaxValue2(List<Integer> nums) {
-        Integer max = nums.stream().distinct().reduce(nums.get(0), (t, u) -> t > u ? t : u);
+        Integer max = nums.
+                stream().
+                distinct().
+                reduce(nums.get(0), (t, u) -> t > u ? t : u);
         System.out.println(max);
     }
 
     //3.Yol
     public static void getMaxValue3(List<Integer> nums) {
-        Integer max = nums.stream().distinct().sorted().reduce((t, u) -> u).get();
+        Integer max = nums.
+                stream().
+                distinct().
+                sorted().
+                reduce((t, u) -> u).
+                get();
 
         System.out.println(max);
     }
@@ -193,7 +201,11 @@ public class Lambda01 {
     //1.Yol
     public static void getMinValue1(List<Integer> nums) {
 
-        Integer min = nums.stream().distinct().reduce((t, u) -> t > u ? u : t).get();
+        Integer min = nums.
+                stream().
+                distinct().
+                reduce((t, u) -> t > u ? u : t).
+                get();
 
         System.out.println(min);
 
@@ -201,20 +213,34 @@ public class Lambda01 {
 
     //2.Yol
     public static void getMinValue2(List<Integer> nums) {
-        Integer min = nums.stream().distinct().sorted(Comparator.reverseOrder()).reduce((t, u) -> u).get();
+        Integer min = nums.
+                stream().
+                distinct().
+                sorted(Comparator.reverseOrder()).
+                reduce((t, u) -> u).
+                get();
 
         System.out.println(min);
     }
 
     //3.Yol
     public static void getMinValue3(List<Integer> nums) {
-        Integer min = nums.stream().distinct().sorted().reduce((t, u) -> t).get();
+        Integer min = nums.
+                stream().
+                distinct().
+                sorted().
+                reduce((t, u) -> t).
+                get();
         System.out.println(min);
     }
 
     //4.Yol
     public static void getMinValue4(List<Integer> nums) {
-        Integer min = nums.stream().distinct().reduce((t, u) -> Math.min(t, u)).get();
+        Integer min = nums.
+                stream().
+                distinct().
+                reduce((t, u) -> Math.min(t, u)).
+                get();
         System.out.println(min);
 
     }
@@ -222,7 +248,12 @@ public class Lambda01 {
     //11)Create a method to find the minimum value which is greater than 7 and even from the list
     //   12 9 131 14 9 10 4 12 15 ==> 10 <-- 7 den buyuk en kucuk cift sayi
     public static void getMinGreaterThanSevenEven(List<Integer> nums) {
-        Integer min = nums.stream().filter(t -> t > 7 && t % 2 == 0).sorted().reduce((t, u) -> t).get();
+        Integer min = nums.
+                stream().
+                filter(t -> t > 7 && t % 2 == 0).
+                sorted().
+                reduce((t, u) -> t).
+                get();
         System.out.println(min);
     }
 }

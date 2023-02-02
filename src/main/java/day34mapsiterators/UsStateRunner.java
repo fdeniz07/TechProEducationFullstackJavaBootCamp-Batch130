@@ -9,5 +9,6 @@ public class UsStateRunner {
 
         UsStates arizona=  UsStates.ARIZONA;
         System.out.println(arizona); //ARIZONA
+
     }
 }
