@@ -36,7 +36,9 @@ public class Lambda01 {
         System.out.println();
         printAllSortWithLenghtUpperDistinct(list); //TOM JOHN AJDA BRAD CUNEYT ANGELINA
         System.out.println();
-        printAllSortWithLastCharUpperDistinct(list); //TOM JOHN CUNEYT BRAD ANGELINA AJDA
+        printAllSortWithLastCharUpperDistinct1(list); //TOM JOHN CUNEYT BRAD ANGELINA AJDA
+        System.out.println();
+        printAllSortWithLastCharUpperDistinct2(list);
         System.out.println();
         printAllSortWithLenghtUpperDistinctSameLenghtsInAlphabeticalOrder(list);//TOMAJDABRADJOHNCUNEYTANGELINA
         System.out.println();
@@ -46,6 +48,7 @@ public class Lambda01 {
         System.out.println(printLenghtSquare(list)); //[9, 16, 16, 64, 9, 16, 36]
         System.out.println();
         System.out.println(printElementsLenghtEven(list)); //[John, Ajda, Angelina, Brad, Cuneyt]
+
     }
 
     //Example 1: Create a method to find the half of the elements greater than 5, distinct, in reverse order, in a list.
@@ -93,12 +96,23 @@ public class Lambda01 {
     }
 
     //Example 5: Tum list elemanlarini buyuk harfle, son harflerine gore azalan sirada, tekrarsiz olarak yazdiriniz
-    public static void printAllSortWithLastCharUpperDistinct(List<String> list) {
-        list
+    public static void printAllSortWithLastCharUpperDistinct1(List<String> list) {
+        list.
 
-                .stream().
+                stream().
                 distinct().
-                map(t -> t.toUpperCase()).
+                map(String::toUpperCase).
+                sorted(Comparator.comparing(Utils::getLastChar).
+                        reversed()).
+                forEach(Utils::printInTheSameLineWithSpace);
+    }
+
+    public static void printAllSortWithLastCharUpperDistinct2(List<String> list) {
+        list.
+
+                stream().
+                distinct().
+                map(String::toUpperCase).
                 sorted(Comparator.comparing(t -> t.charAt(t.length() - 1))).
                 sorted(Comparator.reverseOrder()).
                 forEach(t -> System.out.print(t + " "));
@@ -107,8 +121,8 @@ public class Lambda01 {
     //Example 6: Tum list elemanlarini buyuk harfle, uzunluklarina göre artan sirada, tekrarsiz olarak yazdiriniz
     //Uzunluklari ayni olan elemanlar alfabetik sirada olsunlar
     public static void printAllSortWithLenghtUpperDistinctSameLenghtsInAlphabeticalOrder(List<String> list) {
-        list
-                .stream().
+        list.
+                stream().
                 distinct().
                 map(String::toUpperCase).//String::toUpperCase yapisina "method reference" denir.
                 sorted(Comparator.comparing(String::length).
@@ -116,7 +130,8 @@ public class Lambda01 {
                 forEach(System.out::print);
     }
 
-    //Example 7: Karakter sayisi 5 den fazla olan elemanlari siliniz
+
+//Example 7: Karakter sayisi 5 den fazla olan elemanlari siliniz
 //    public static List<String> removeElementIfTheLenghtGreaterThanFive(List<String> list) {
 //        list
 //                .removeIf(t -> t.length() > 5);
@@ -124,11 +139,13 @@ public class Lambda01 {
 //        return list;
 //    }
 
-    //Example 8: "A" ile baslayan veya "d" ile biten elemanlari siliniz
-    //Bazen "stream()" methodu bize lazim olan method'lara ulasmamiza engel olur. Bu yüzden "stream()" method'unu kullanmayiz."removeIf()" method'unda oldugu gibi.
-    //Fakat stream() method'unu daha sonradan kullanmamiz gerekebilir. Bu durumda stream() method'unu kullanarak istedigimiz method'lara ulasiriz.
-    //Distinc() method'una ulastigimiz gibi.
-    //Sonuc bize list olarak lazim ise "collect(Collectors.toList())" ile sonucu list'e ceiririz.
+//Example 8: "A" ile baslayan veya "d" ile biten elemanlari siliniz
+    /* Bazen "stream()" methodu bize lazim olan method'lara ulasmamiza engel olur. Bu yüzden "stream()" method'unu kullanmayiz."removeIf()" method'unda oldugu gibi.
+        Fakat stream() method'unu daha sonradan kullanmamiz gerekebilir. Bu durumda stream() method'unu kullanarak istedigimiz method'lara ulasiriz.
+        Distinc() method'una ulastigimiz gibi.
+        Sonuc bize list olarak lazim ise "collect(Collectors.toList())" ile sonucu list'e ceiririz.
+    */
+
 //    public static List<String> removeElementIfStartsWithAorEndsWidthd(List<String> list){
 //        list.
 //                removeIf(t->t.startsWith("A") || t.endsWith("d"));
@@ -136,16 +153,16 @@ public class Lambda01 {
 //    }
 
     //9)List elemanlarini character sayilarinin karelerini aliniz ve bir list olarak ekrana yazdiriniz.
-    public static List<Integer> printLenghtSquare(List<String> list){
-       return list.
+    public static List<Integer> printLenghtSquare(List<String> list) {
+        return list.
                 stream().
                 map(Utils::getLenghtSquare).
                 collect(Collectors.toList());
     }
 
     //Example 10: List elemanlarindan karakter sayisi cift sayi olanlari bir list icinde ekrana yazdiriniz
-    public static List<String> printElementsLenghtEven(List<String> list){
-      return   list.
+    public static List<String> printElementsLenghtEven(List<String> list) {
+        return list.
                 stream().
                 filter(Utils::isEven).
                 collect(Collectors.toList());
