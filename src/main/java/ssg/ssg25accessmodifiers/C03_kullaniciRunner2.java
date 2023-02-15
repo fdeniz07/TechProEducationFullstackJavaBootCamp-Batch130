@@ -1,4 +1,4 @@
-package ssg.ssg25accessModifiers;
+package ssg.ssg25accessmodifiers;
 
 public class C03_kullaniciRunner2 {
     public static void main(String[] args) {

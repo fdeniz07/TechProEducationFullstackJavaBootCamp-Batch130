@@ -1,4 +1,4 @@
-package ssg.ssg25accessModifiers;
+package ssg.ssg25accessmodifiers;
 
 public class C01_kullanici {
     public String kullaniciAdi="AFK";//Herkes gorebilir

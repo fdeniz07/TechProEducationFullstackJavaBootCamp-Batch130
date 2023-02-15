@@ -1,4 +1,4 @@
-package ssg.ssg25accessModifiers;
+package ssg.ssg25accessmodifiers;
 
 public class C02_kullaniciRunner2 extends C01_kullanici {
     static int kullaniciId=98765;
