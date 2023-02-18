@@ -9,6 +9,8 @@ public class Lambda02 {
         System.out.println(birdenXeKadarTekSayilarinToplami(10));
         System.out.println(birdenSonsuzaKadarGidenTekSayilardanIlkXTanesiniTopla(6));
         System.out.println(ikidenSonsuzaKadarGidenCiftSayilardanIlkXTanesiniTopla(3));
+        System.out.println(besdenSonsuzaKadarGidenKuvvetlerindenIlkXKuvvetToplami(2));
+        System.out.println(faktoriyel(5));
     }
 
     //SORU1: 1'den x'e kadar int degerleri akısa alınız(x dahil olacak), toplamını bulup return ederek yazdırınız.
@@ -40,6 +42,20 @@ public class Lambda02 {
     public static int ikidenSonsuzaKadarGidenCiftSayilardanIlkXTanesiniTopla(int x){
 
         int sonuc = IntStream.iterate(2,t->t+2).limit(x).sum();
+        return sonuc;
+    }
+
+    //SORU5: 5'den sonsuza kadar giden kuvvetlerinden ilk x kuvvetinin toplamını return ederek yazdırınız
+    public static int besdenSonsuzaKadarGidenKuvvetlerindenIlkXKuvvetToplami(int x){
+
+        int sonuc = IntStream.iterate(5,t->t*5).limit(x).sum();
+        return sonuc;
+    }
+
+    //SORU6: x sayisinin faktoriyelini bulunuz
+    public static int faktoriyel(int x){
+
+        int sonuc = IntStream.rangeClosed(1,x).reduce(1,(a,b)->a*b);
         return sonuc;
     }
 }
