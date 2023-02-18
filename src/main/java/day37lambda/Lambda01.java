@@ -26,21 +26,33 @@ public class Lambda01 {
 
     //1)Verilen list'deki tum sayilarin toplamini veren method'u olusturunuz
     public static int getSumOfAllElements(List<Integer> myList) {
-        return myList.stream().reduce(Math::addExact).get();
+        return myList.
+                stream().
+                reduce(Math::addExact).
+                get();
     }
 
     //2)7'den 70'e kadar tum tamsayilarin toplamini veren kodu yaziniz
     public static int getSumFromSevenToSeventy() {
-        return IntStream.rangeClosed(7, 70).reduce(Math::addExact).getAsInt();
+        return IntStream.
+                rangeClosed(7, 70).
+                reduce(Math::addExact).
+                getAsInt();
     }
 
     //3)3'den 9'a kadar tum tamsayilarin carpimini veren methodu olusturunuz.
     public static int getMultiplicationFromThreeToNine1() {
-        return IntStream.rangeClosed(3, 9).reduce(Math::multiplyExact).getAsInt();// rangeClosed() ==> [ ]
+        return IntStream.
+                rangeClosed(3, 9).
+                reduce(Math::multiplyExact).
+                getAsInt();// rangeClosed() ==> [ ]
     }
 
     public static int getMultiplicationFromThreeToNine2() {
-        return IntStream.range(3, 10).reduce(Math::multiplyExact).getAsInt();// rangeClosed() ==> [ )
+        return IntStream.
+                range(3, 10).
+                reduce(Math::multiplyExact).
+                getAsInt();// rangeClosed() ==> [ )
     }
 
     //4)Size verilen sayinin faktoryelini hesaplayan kodu yaziniz.
@@ -52,7 +64,10 @@ public class Lambda01 {
             System.out.println("Faktoriyel islemi negatif sayilarla yapilamaz");
             return -1;
         } else {
-            return IntStream.rangeClosed(1, x).reduce(Math::multiplyExact).getAsInt();
+            return IntStream.
+                    rangeClosed(1, x).
+                    reduce(Math::multiplyExact).
+                    getAsInt();
         }
     }
 
@@ -64,7 +79,10 @@ public class Lambda01 {
             a=b;
             b=temp;
         }
-        return IntStream.range(a + 1, b).filter(Utils::isNumberEven).sum();
+        return IntStream.
+                range(a + 1, b).
+                filter(Utils::isNumberEven).
+                sum();
     }
 
     //Example 6:Size verilen iki tamsayi arasindaki tum tamsayilarin rakamlari toplamini veren kodu yaziniz.
@@ -78,6 +96,9 @@ public class Lambda01 {
         }
 
         // rakamlari teker teker alip sonradan toplayacak streamdeki elemanlar degiscek bu yuzden reduce yerine map kullandik.
-        return IntStream.range(a+1, b).map(Utils::getSomeOfDigits).sum();
+        return IntStream.
+                range(a+1, b).
+                map(Utils::getSomeOfDigits).
+                sum();
     }
 }
