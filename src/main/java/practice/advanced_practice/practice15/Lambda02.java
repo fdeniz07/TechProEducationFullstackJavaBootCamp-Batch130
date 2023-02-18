@@ -8,6 +8,7 @@ public class Lambda02 {
         System.out.println(birdenXeKadarDegerlerToplami(5));
         System.out.println(birdenXeKadarTekSayilarinToplami(10));
         System.out.println(birdenSonsuzaKadarGidenTekSayilardanIlkXTanesiniTopla(6));
+        System.out.println(ikidenSonsuzaKadarGidenCiftSayilardanIlkXTanesiniTopla(3));
     }
 
     //SORU1: 1'den x'e kadar int degerleri akısa alınız(x dahil olacak), toplamını bulup return ederek yazdırınız.
@@ -33,5 +34,12 @@ public class Lambda02 {
 
     return sonuc;
 
+    }
+
+    //SORU4: 2'den sonsuza kadar giden Çift sayılardan, ilk x tanesini toplayınız sonucu return ederek yazdırınız
+    public static int ikidenSonsuzaKadarGidenCiftSayilardanIlkXTanesiniTopla(int x){
+
+        int sonuc = IntStream.iterate(2,t->t+2).limit(x).sum();
+        return sonuc;
     }
 }
