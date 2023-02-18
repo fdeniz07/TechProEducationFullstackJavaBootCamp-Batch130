@@ -5,6 +5,7 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class Lambda01 {
 
@@ -26,6 +27,12 @@ public class Lambda01 {
         System.out.println(" cephesiDoguOlanlarinSayisi = " + cephesiDoguOlanlarinSayisi(daireler));
         System.out.println("************************************************************");
         System.out.println(" katSayisinaGoreBuyuktenKucugeSirala = " + katSayisinaGoreBuyuktenKucugeSirala(daireler));
+        System.out.println("************************************************************");
+        System.out.println(" katSayisiIkidenBuyukOlanlariKirayaGoreBuyuktenKucugeSirala = " + katSayisiIkidenBuyukOlanlariKirayaGoreBuyuktenKucugeSirala1YOL(daireler));
+        System.out.println("************************************************************");
+        katSayisiIkidenBuyukOlanlariKirayaGoreBuyuktenKucugeSirala2YOL(daireler);
+        System.out.println("************************************************************");
+        System.out.println(" katSayisi3DenAzOlanKirayaGoreKucuktenBuyugeSiralaEnKucukKiraListesiniYazdir = " + katSayisi3DenAzOlanKirayaGoreKucuktenBuyugeSiralaEnKucukKiraListesiniYazdir(daireler));
         System.out.println("************************************************************");
     }
 
@@ -70,5 +77,46 @@ public class Lambda01 {
 
     }
 
+    //SORU5: katSayisi 2'den fazla olan daireleri, kiraya gore buyukten kucuge sıralayınız, en buyuk kira'sını list halinde return ederek yazdırınız.
+    public static List<Integer> katSayisiIkidenBuyukOlanlariKirayaGoreBuyuktenKucugeSirala1YOL(List<Apartman> daireler) {
+
+        List<Integer> sonuc = daireler.
+                stream().
+                filter(t -> t.getKatSayi() > 2).
+                sorted(Comparator.comparing(Apartman::getKira).reversed()).
+                limit(1).
+                map(t -> t.getKira()).
+                collect(Collectors.toList());
+
+        return sonuc;
+
+    }
+
+    //SORU5: katSayisi 2'den fazla olan daireleri, kiraya gore buyukten kucuge sıralayınız, en buyuk kira'sını list halinde return ederek yazdırınız.
+    public static void katSayisiIkidenBuyukOlanlariKirayaGoreBuyuktenKucugeSirala2YOL(List<Apartman> daireler) {
+
+        Stream<Integer> sonuc = daireler.
+                stream().
+                filter(t -> t.getKatSayi() > 2).
+                sorted(Comparator.comparing(Apartman::getKira).reversed()).
+                limit(1).
+                map(t -> t.getKira());
+
+        System.out.println(Arrays.asList(sonuc.toArray()));
+    }
+
+    //SORU6: katSayisi 3'den az olan daireleri, kiraya gore kucukten buyuge sıralayınız, en kucuk kira'sini list halinde return ederek yazdırınız.
+    public static  List<Integer> katSayisi3DenAzOlanKirayaGoreKucuktenBuyugeSiralaEnKucukKiraListesiniYazdir(List<Apartman> daireler){
+
+        List<Integer> sonuc =  daireler.
+                stream().
+                filter(t->t.getKatSayi()<3).
+                sorted(Comparator.comparing(Apartman::getKira)).
+                limit(1).
+                map(t->t.getKira()).
+                collect(Collectors.toList());
+
+        return sonuc;
+    }
 
 }
