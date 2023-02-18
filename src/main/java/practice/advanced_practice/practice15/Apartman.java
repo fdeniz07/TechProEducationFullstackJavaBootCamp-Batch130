@@ -9,6 +9,12 @@ public class Apartman {
     public Apartman() {
     }
 
+    public Apartman(String cephe, int katSayi, int kira) {
+        this.cephe = cephe;
+        this.katSayi = katSayi;
+        this.kira = kira;
+    }
+
     public String getCephe() {
         return cephe;
     }
@@ -31,5 +37,14 @@ public class Apartman {
 
     public void setKira(int kira) {
         this.kira = kira;
+    }
+
+    @Override
+    public String toString() {
+        return "{" +
+                "cephe='" + cephe + '\'' +
+                ", katSayi=" + katSayi +
+                ", kira=" + kira +
+                '}';
     }
 }
