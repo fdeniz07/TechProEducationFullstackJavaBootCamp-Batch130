@@ -2,22 +2,22 @@ package day04memoryusingwrapperclassascii;
 
 public class C04_WrapperClass {
     /*
-        Non - Primitive Data type'lar sadece data barindirmak icin degil ayni zamanda methodlarda bulundurur.
+        Non-Primitive Data type'lar sadece data barindirmak icin degil ayni zamanda methodlarda bulundurur.
         Primitive Data Type'lar ise sadece deger saklar
         Java bu duruma bir cözüm üretmistir.
         Her primitive data türünü Non-Primitive olarak kullanabilmek icin özel Class'lar olusturmustur.
         Oracle firmasinin ürünü olan java primitive'lere method ekleyerek olusturduklari bu yeni yapiya Wrapper Class (sarmallanmis) adini vermistir.
 
 
-        Primitive       Wrapper(Non-Primitive)
-          byte            Byte
-          short           Short
-          int             Integer *****
-          long            Long
-          float           Float
-          double          Double
-          boolean        Boolean
-          char            Character *****
+        Primitive   -    Wrapper(Non-Primitive)
+          byte      -     Byte
+          short     -      Short
+          int       -      Integer *****
+          long      -      Long
+          float     -      Float
+          double    -      Double
+          boolean   -     Boolean
+          char      -      Character *****
 
        Note: Wrapper Class'lar non-primitive'dir o yuzden memory'de cok yer kaplarlar, o yuzden sart degilse Wrapper Class kullanmayi tercih etmeyiz.
 

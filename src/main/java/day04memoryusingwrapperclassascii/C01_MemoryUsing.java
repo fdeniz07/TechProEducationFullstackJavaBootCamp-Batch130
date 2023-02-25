@@ -10,6 +10,6 @@ public class C01_MemoryUsing {
 
         Note: Java, Heap Memory'e yerlestiren tüm Non-Primitve data'lar icin Stack Memory'de bir adres (Referans) saklar.
 
-        Note: Heap 'de kullanilmayan datalarin temizligini Garbage Collector (Cöp toplayicisi) yapar.
+        Note: Heap'de kullanilmayan datalarin temizligini Garbage Collector (Cöp toplayicisi) yapar.
      */
 }

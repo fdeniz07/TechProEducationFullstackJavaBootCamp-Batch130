@@ -11,7 +11,7 @@ public class C01_PassByValue {
 
         Java Pass By Value kullanir.
         1) Java variable'in orjinal degerini korumak ister
-        2) Java variable'in icindeki degeri kopyalar ve methodun icine kopya degeri gonderiri.
+        2) Java variable'in icindeki degeri kopyalar ve methodun icine kopya degeri gonderir.
         Deger uzerinde yapilan degisiklikler orjinal parametreyi etkilemez.
 
         Pass By Referance'da ise referans kopyalanir ve methodda kullanilir.
