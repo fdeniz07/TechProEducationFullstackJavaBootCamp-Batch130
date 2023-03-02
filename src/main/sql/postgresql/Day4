@@ -1,0 +1,20 @@
+/*============================ALTER==================================
+
+DDL Grubundan==> ALTER komutu tabloyu günceller.
+
+
+add column ==> yeni sutun ekleyerek tabloda güncellemeler yapar
+
+drop column ==> mevcut olan sutunu silerek tabloda güncellemeler yapar
+
+rename column ==> sutunun ismini degistirerek tabloda güncellemeler yapar
+
+rename ==> tablonun ismini degistirerek tabloda güncellemeler yapar
+
+
+Syntax:
+-------
+
+alter table tablo_adi güncelleme;
+
+=====================================================================*/
