@@ -1,0 +1,239 @@
+create table ogrenciler
+    (
+        id int,
+        isim varchar(40),
+        adres varchar(100),
+        sinav_notu int
+    );
+
+insert into ogrenciler values(120, 'Ali Can', 'Ankara', 75);
+insert into ogrenciler values(121, 'Veli Mert', 'Trabzon', 85);
+insert into ogrenciler values(122, 'Ayşe Tan', 'Bursa', 65);
+insert into ogrenciler values(123, 'Derya Soylu', 'Istanbul', 95);
+insert into ogrenciler values(124, 'Yavuz Bal', 'Ankara', 85);
+insert into ogrenciler values(125, 'Ali Canay', 'Hatay', 100);
+select * from ogrenciler;
+--SORU: ogrenciler tablosundaki id ve isim sütununu getiriniz
+select id,isim from ogrenciler;
+--SORU: Sınav notu 80'den büyük olan öğrencilerin tüm bilgilerini listele
+select * from ogrenciler where sinav_notu>80;
+--SORU: Adresi Ankara olan ögrencilerin tüm bilgilerini listele
+select * from ogrenciler where adres='Ankara';
+--SORU: Sınav notu 85 ve adresi Ankara olan öğrenci ismini listele
+select isim from ogrenciler where adres='Ankara' AND sinav_notu=85;
+--SORU: .Sınav notu 65 veya 85 olan ogrencilerin tüm bilgilerini listele
+select * from ogrenciler where sinav_notu=65 or sinav_notu=85;
+select * from ogrenciler where sinav_notu in (65,85);
+--SORU: Sınav notu 65 ve 85 arasında olan ogrencilerin tüm bilgilerini listele
+select * from ogrenciler where sinav_notu between 65 and 85;
+--SORU: id'si 122 ve 125 arasında olmayan ögrencilerin isim ve sınav notu listele
+select isim,sinav_notu from ogrenciler where id not between 122 and 125;
+--SORU: sinav_notu 75 olan satırı siliniz
+delete from ogrenciler where sinav_notu=75;
+--SORU: adres'i Trabzon olan satırı siliniz
+delete from ogrenciler where adres='Trabzon';
+--SORU: ismi Derya Soylu veya Yavuz Bal olan satırları siliniz
+delete from ogrenciler where isim in('Derya Soylu','Yavuz Bal')
+delete from ogrenciler where isim='Derya Soylu' or isim='Yavuz Bal';
+--SORU: Tablodaki tüm satırları siliniz
+delete from ogrenciler;
+/*
+​
+CHİLD TABLODA ON DELETE CASCADE KOMUTU YAZILMAZSA
+​
+1-) Child tablo silinmeden Parent tablo silinmeye çalışıldıgında PgAdmin Error verir.
+yani Child tablo silinmeden Parent tablo silinemez
+​
+2-) Child tablodaki veri silinmeden Parent tablodaki veri silinmeye çalışıldıgında Pg Admin Error verir.
+yani Child tablodaki veri silinmeden Parent tablodaki veri silinemez
+​
+​
+CHİLD TABLODA ON DELETE CASCADE KOMUTU YAZILIRSA
+​
+1-) Child tablo silinmeden Parent tablo silinebilir.
+PgAdmin Error vermez
+​
+2-) Child tablodaki veri silinmeden Parent tablodaki veri silinmeye çalışıldıgında PgAdmin Error vermez
+Parent tablodaki veriyi siler.
+Fakat bu durumda Child tablodaki veride silinir.
+​
+​
+*/
+CREATE TABLE parent2
+(
+vergi_no int PRIMARY KEY,
+firma_ismi VARCHAR(50),
+irtibat_ismi VARCHAR(50)
+);
+
+INSERT INTO parent2 VALUES (101, 'Sony', 'Kim Lee');
+INSERT INTO parent2 VALUES (102, 'Asus', 'George Clooney');
+INSERT INTO parent2 VALUES (103, 'Monster', 'Johnny Deep');
+INSERT INTO parent2 VALUES (104, 'Apple', 'Mick Jackson');
+select * from parent2;
+CREATE TABLE child2
+(
+ted_vergino int,
+urun_id int,
+urun_isim VARCHAR(50),
+musteri_isim VARCHAR(50),
+CONSTRAINT fk FOREIGN KEY(ted_vergino) REFERENCES parent2(vergi_no)
+ON DELETE CASCADE
+);
+
+INSERT INTO child2 VALUES(101, 1001,'PC', 'Habip Sanli');
+INSERT INTO child2 VALUES(102, 1002,'Kamera', 'Zehra Oz');
+INSERT INTO child2 VALUES(102, 1003,'Saat', 'Mesut Kaya');
+INSERT INTO child2 VALUES(102, 1004,'PC', 'Vehbi Koc');
+INSERT INTO child2 VALUES(103, 1005,'Kamera', 'Cemal Sala');
+INSERT INTO child2 VALUES(104, 1006,'Saat', 'Behlül Dana');
+INSERT INTO child2 VALUES(104, 1007,'Kamera', 'Eymen Ozden');
+select * from child2;
+--SORU1: parent2 tablosundaki tüm verileri siliniz
+delete from parent2;
+--SORU2: parent2 tablosunu siliniz
+drop table parent2 cascade;
+--SORU3: child2 tablosunu siliniz;
+drop table child2;
+ -- ***********************************************************************************
+ --  ********************* UPDATE **************************************************
+ -- ***********************************************************************************
+
+CREATE TABLE toptancilar     --> parent
+(
+vergi_no int PRIMARY KEY,
+sirket_ismi VARCHAR(40),
+irtibat_ismi VARCHAR(30)
+);
+
+INSERT INTO toptancilar VALUES (201, 'IBM', 'Kadir Şen');
+INSERT INTO toptancilar VALUES (202, 'Huawei', 'Çetin Hoş');
+INSERT INTO toptancilar VALUES (203, 'Erikson', 'Mehmet Gör');
+INSERT INTO toptancilar VALUES (204, 'Apple', 'Adem Coş');
+select * from toptancilar;
+CREATE TABLE malzemeler     --> child
+(
+ted_vergino int,
+malzeme_id int,
+malzeme_isim VARCHAR(20),
+musteri_isim VARCHAR(25),
+CONSTRAINT fk FOREIGN KEY(ted_vergino) REFERENCES toptancilar(vergi_no)
+on delete cascade
+);
+
+INSERT INTO malzemeler VALUES(201, 1001,'Laptop', 'Aslı Can');
+INSERT INTO malzemeler VALUES(202, 1002,'Telefon', 'Fatih Ak');
+INSERT INTO malzemeler VALUES(202, 1003,'TV', 'Ramiz Özmen');
+INSERT INTO malzemeler VALUES(202, 1004,'Laptop', 'Veli Tan');
+INSERT INTO malzemeler VALUES(203, 1005,'Telefon', 'Cemile Al');
+INSERT INTO malzemeler VALUES(204, 1006,'TV', 'Ali Can');
+INSERT INTO malzemeler VALUES(204, 1007,'Telefon', 'Ahmet Yaman');
+select * from malzemeler;
+​
+-- SORU1: vergi_no’su 202 olan toptancinin sirket_ismi'ni 'VivoBook' olarak güncelleyeniz.
+update toptancilar set sirket_ismi ='VivoBook'
+where vergi_no='202';
+select * from toptancilar;
+-- SORU2: malzemeler tablosundaki 'Telefon' değerlerini 'Phone' olarak güncelleyiniz.
+update malzemeler set malzeme_isim='Phone' where malzeme_isim='Telefon';
+select * from malzemeler;
+-- SORU3: Malzemeler tablosundaki musteri_isim'i Ali Can olan malzeme_isim'ini,
+--  toptancılar  tablosunda irtibat_ismi 'Adem Coş' olan sirket_ismi ile güncelleyiniz.
+update malzemeler set malzeme_isim=( select sirket_ismi from toptancilar where irtibat_ismi='Adem Coş')
+where musteri_isim='Ali Can';
+select * from malzemeler;
+ -- ***********************************************************************************
+ --  ****************** SUM / MAX / AVG *************************************************
+ -- ***********************************************************************************
+ create table arac(
+id int,
+marka varchar(30),
+model varchar(30),
+fiyat int,
+kilometre int,
+vites varchar(20)
+);
+insert into arac values(100, 'Citroen', 'C3', 500000, 5000, 'Otomatik' );
+insert into arac values(101, 'Mercedes', 'C180', 900000, 10000, 'Otomatik' );
+insert into arac values(102, 'Honda', 'Cıvıc', 400000, 15000, 'Manuel' );
+insert into arac values(103, 'Wolkswagen', 'Golf', 350000, 20000, 'Manuel' );
+insert into arac values(104, 'Ford', 'Mustang', 750000, 5000, 'Otomatik' );
+insert into arac values(105, 'Porsche', 'Panamera', 850000, 5000, 'Otomatik' );
+insert into arac values(106, 'Bugatti', 'Veyron', 950000, 5000, 'Otomatik' );
+select * from arac;
+--SORU1: arac tablosundaki en yüksek fiyat'ı listele
+select max(fiyat) from arac;
+--SORU2: arac tablosundaki fiyatların toplamını listele
+select sum(fiyat) from arac;
+--SORU3: arac tablosundaki fiyat ortalamalarını listele
+select avg(fiyat) from arac;
+select round(avg(fiyat)) from arac;
+select round(avg(fiyat),2) from arac;
+--SORU4: arac tablosunda kaç tane araç oldugunu listele
+select count(id) from arac;
+ -- ***********************************************************************************
+ --  ********************** ORDER *************************************************
+ -- ***********************************************************************************
+CREATE TABLE meslekler
+(
+id int PRIMARY KEY,
+isim VARCHAR(50),
+soyisim VARCHAR(50),
+meslek CHAR(9),
+maas int
+);
+
+
+
+INSERT INTO meslekler VALUES(1, 'Ali', 'Can', 'Doktor', '20000' );
+INSERT INTO meslekler VALUES(2, 'Veli', 'Cem', 'Mühendis', '18000');
+INSERT INTO meslekler VALUES(3, 'Mine', 'Bulut', 'Avukat', '17000');
+INSERT INTO meslekler VALUES(4, 'Mahmut', 'Bulut', 'Ögretmen', '15000');
+INSERT INTO meslekler VALUES (5, 'Mine', 'Yasa', 'Teknisyen', '13000');
+INSERT INTO meslekler VALUES (6, 'Veli', 'Yilmaz', 'Hemşire', '12000');
+INSERT INTO meslekler VALUES(7, 'Ali', 'Can', 'Marangoz', '10000' );
+INSERT INTO meslekler VALUES(8, 'Veli', 'Cem', 'Tekniker', '14000');
+-- SORU1: meslekler tablosunu isim'e göre sıralayarak sorgulayınız.
+select * from meslekler order by isim;
+-- SORU2: meslekler tablosunda maas'i buyukten kucuge siralayiniz
+select * from meslekler order by maas desc;
+-- SORU3: meslekler tablosunda isim'i 'Ali' olanları,
+--    maas'a göre büyükten küçüge sıralayarak sorgulayınız
+select * from meslekler where isim='Ali' order by maas desc;
+-- SORU4: meslekler tablosunda soyisim 'i 'Bulut' olanları,
+--   maas sıralı olarak sorgulayınız.
+select * from meslekler where soyisim='Bulut' order by maas;
+ -- ********************************************************************************
+ --  **************************** JOIN *******************************************
+ -- ********************************************************************************
+create table filmler
+(film_id int,
+film_name varchar(30),
+category varchar(30)
+);
+insert into filmler values (1, 'Eyvah Eyvah', 'Komedi');
+insert into filmler values (2, 'Kurtlar Vadisi', 'Aksiyon');
+insert into filmler values (3, 'Eltilerin Savasi', 'Komedi');
+insert into filmler values (4, 'Aile Arasinda', 'Komedi');
+insert into filmler values (5, 'GORA', 'Bilim Kurgu');
+insert into filmler values (6, 'Organize Isler', 'Komedi');
+insert into filmler values (7, 'Babam ve Oglum', 'Dram');
+create table aktorler
+(id int,
+actor_name varchar(30),
+film_id int
+);
+insert into aktorler values (1, 'Ata Demirer', 1);
+insert into aktorler values (2, 'Necati Sasmaz', 2);
+insert into aktorler values (3, 'Gupse Ozay', 3);
+insert into aktorler values (4, 'Engin Gunaydin', 4);
+insert into aktorler values (5, 'Cem Yilmaz', 5);
+-- SORU1: Tüm film_name'leri, category'lerini ve filimlerde oynayan actor_name'leri listeleyiniz.
+-- 1.yol lEFT Join
+select film_name, category, actor_name from filmler as A
+left join aktorler as B
+on A.film_id=B.film_id;
+-- 2.yol Right join
+select film_name, category, actor_name from aktorler as B
+right join filmler as A
+on A.film_id=B.film_id;
