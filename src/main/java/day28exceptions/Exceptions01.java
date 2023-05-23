@@ -16,7 +16,7 @@ public class Exceptions01 {
         Gercek hayatta soforun olmesi gibi handle edilemeyecek durumlar "Error" dur.
         Application'larda "Memory" nin dolmasi "Error" dur.
         Iki tur memory vardir;
-        i)Stack Memory: dolarsa "StackMemoryFlow Error" alirsiniz.
+        i)Stack Memory: dolarsa "StackOverFlow Error" alirsiniz.
         ii)Heap Memory: dolarsa "OutOfMemory Error" alirsiniz.
 
       5)Yazdiginiz kod calismadiginda problemi bulmak icin "Log" lara bakariz.
