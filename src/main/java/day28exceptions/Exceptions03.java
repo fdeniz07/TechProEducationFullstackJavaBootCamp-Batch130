@@ -16,9 +16,9 @@ public class Exceptions03 {
             char ch = s.charAt(idx);
             System.out.println(ch);
         } catch (StringIndexOutOfBoundsException e) {
-            System.out.println("Olmanyan index kullanma hatasi yaptiniz... " + e.getMessage());
-            System.out.println(e.getCause());
-            e.printStackTrace();
+            System.out.println("Olmanyan index kullanma hatasi yaptiniz... " + e.getMessage()); //hata ile ilgili tek satirlik bir mesaj verir
+            System.out.println(e.getCause()); //Hatanin sebebini söyler
+            e.printStackTrace(); //Developer'lar bu detayli hata raporunu kullanmayi severler.
 
         }
 

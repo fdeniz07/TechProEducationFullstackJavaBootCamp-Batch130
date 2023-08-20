@@ -31,12 +31,14 @@ public class C06_Varargs {
         return i + i1;
     }
 
-    private static int add(String str, int... a) {
+    private static int add( String str,int... a) {
         int sum = 0;  //  int... a,String str unreachable code == ulasilamaz kod
         for (int w : a) {
             sum = sum + w;
-
         }
         return sum;
     }
+
+
 }
+
